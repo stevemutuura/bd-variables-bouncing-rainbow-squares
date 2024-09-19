@@ -26,7 +26,7 @@ public class Main extends PApplet {
     }
 
     public void draw() {
-        fill(255, 255, 255);
+        fill(hue, 255, 255);
         rect(xPos, yPos, sideLength, sideLength);
 
         xPos += xVel;
@@ -43,7 +43,7 @@ public class Main extends PApplet {
         }
 
         if (xPos + sideLength >= width) {
-            xPos = width;
+            xPos = width - sideLength;
             xVel = -xVel;
         }
 
